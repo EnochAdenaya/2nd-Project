@@ -307,10 +307,6 @@ form input {
     }
 
     nav {
-        
-    }
-
-    form input {
-        width: 100%;
+        display: none;
     }
 }
