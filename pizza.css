@@ -112,6 +112,10 @@ a.see-menu:hover {
     padding-bottom: 40px;
 }
 
+.food-classes button.active {
+    background-color: red;
+}
+
 .food-classes {
     display: flex;
     justify-content: space-between;

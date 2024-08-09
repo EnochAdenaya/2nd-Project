@@ -31,10 +31,10 @@
     <div class="menu-container" id="menu">
         <div class="menu">
             <h1 class="menu">THE MENU</h1>
-            <div class="food-classes">
-                <button id="btn_pizza">Pizza</button>
-                <button id="btn_salads">Salads</button>
-                <button id="btn_starter">Starter</button>
+            <div class="food-classes" id="buttons">
+                <button id="btn_pizza" class="btn active">Pizza</button>
+                <button id="btn_salads" class="btn">Salads</button>
+                <button id="btn_starter" class="btn">Starter</button>
             </div>
             <div class="food-blocks">
                 <div class="pizza" id="pizza">
@@ -232,6 +232,17 @@
             salads.style.display='none';
             starter.style.display='block';
         })
+
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("buttons");
+        var btns = header.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+          });
+        }
     </script>
 </body>
 </html>
