@@ -309,4 +309,8 @@ form input {
     nav {
         display: none;
     }
+
+    .contact-date {
+        min-width: 100%;
+    }
 }
